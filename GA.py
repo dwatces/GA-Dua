@@ -93,39 +93,5 @@ if __name__ == '__main__':
     
 
 
-# In[ ]:
-
-
-import requests
-import json
-
-# Define the JSON data to send in the HTTP POST request
-data = {
-    "credentials": {
-         "type": "service_account",
-          "project_id": "tidy-interface-384121",
-          "private_key_id": "527f64c4d3ef0cb487114a2c02ac6f7ec87d8e9e",
-          "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQC2M+jD2gpagf2P\n3EIUruwa3c5Yrzp2oMgxQmLIw37fikMeps/+8tGDs1Dt13mYuSuwcZjZ4cuIXYM9\nJ8oDsVB/NccmGvpIAe8kmhtxtgutSOQ/kOW9fwIBSY6wd1tu2dxSMtRkMBgGIVbF\nh1r5QeJfJ9KdkrGLYJJK+liFYnMKOuhvZoyTI/OESCIB8/SBv1OQA86AgciSdUUZ\n1pvD+5Qx7zexEJfSokjQfu5fsn4PWxd5JIbn+ygUIkaqp+Q086rSECDw/HyVRodW\n4W9AFxqmsouG5ObyqWUwYSipUCpOb7P6mVOd121eBNICsEx+XM8GxPiC7OZvUZ/a\nBxUAFqP5AgMBAAECggEABK1gtW1inGfvnMquUhZa9oYY4tctuKegN/6Ap294UW/8\n0Nu+pWhxlzBKXK6uPwzK2bLS1g4JMekXokFkGtPpkXhtkjV5VRGipFWF7JV8J4DC\nZjzXnvWUlTigjnhj6xyx3pTSNbez2C1xKy0yOUmXEHMG4bdnMiEipETYsqTgN+QX\n0Lgdf1YwIxgj7Bn6B/mTNSbh+i+/4WrdhqejTNrmh00xq4zNgQ4U9Mf2BwrB1srb\njDYpz+e2pWRGFaCQZOFAAOXUz5s5EKdFf2HhHLgtHwbeUbsuqtSxrEaH7xd0lFar\nPsmh1Xp1CRehpLXDInJ/aj+MyIvfN61hgN8v4w7O8QKBgQD0dHoOVLpkqS4u7ukK\nCpAJPjXb1jdhuerI5YUxGvPjvTrPtWlJBu6x1QDllRHMZkH1vEcqJQU+SJ19BA7t\nvS3v3X3zbzjhJUQVXt30TNBH50pRtG2GlPYR2Y488OZNS92YuVCb70mEskRJ+75R\nKsvy0lahYZLzgtwt6AEXbIG36QKBgQC+zsmJwjd/3NP9Hls4YcBQiveQi7V1j7/P\nExoXmQqFpcNq+F35gmbNJ79EOxeNuQuwfy+378AiRUN5YRx4Bs4smcqK3sBUHA7S\n4AJXAU7fzZRDZLdqaC7YeEnTVg4ejH2DZm5hC20iULGGs2bK7MH5QAUc5KbPQJdt\nOlSLeM8RkQKBgDlLE1BIi2cMP8bAN94im5+O9RCRJGnDKUPsh0r7Bi5aK26DFioH\ndeo4Af3M8l71mH//oK4//vqaCk9CpD0UGbAeOWbUqoAaO9rGYT7gwfAYRVLg9sqU\nHxgP5UZjL5buMQGabUoeyxxOq7KrTe+4GBTRN3ybYdWw1ensdlUHGWABAoGACC2i\n08XATTmw2GOJs2P1Mz6Rl991GqHbrct6zdIgclQFiTs2A/DD6T0v5IPH4aoxxxHc\ngLzE9nMTjktMRhS8l4rL9KHRioldVUqGryX+NHeCSFUzy1rFzz9wop9IoaSR6KTm\nTECKH/NneIeN+1qkgcNttKxUPgPdua/LWeMGtRECgYB3D8MuIjIRRG4h0P848xNe\nyLfEID4D39JpWMZY1spBoqqfG3REqlXmXvl2m3Xmzrne9A7jUtEmPUOu6ugJ0fah\nj34i5dCA3eZPgeEh4uY5RZWr/8xlpzjxbE6TKRweUkjaSgPp4WtbHmolr/1/nQdw\nGKbqgfnSpm6JMyuxJgopUw==\n-----END PRIVATE KEY-----\n",
-          "client_email": "test-624@tidy-interface-384121.iam.gserviceaccount.com",
-          "client_id": "115704331410859531959",
-          "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-          "token_uri": "https://oauth2.googleapis.com/token",
-          "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-          "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/test-624%40tidy-interface-384121.iam.gserviceaccount.com"
-    },
-    "view_id": account_name,
-    "tracking_id": property_name,
-}
-
-# Send the HTTP POST request to the Flask app
-response = requests.post("http://127.0.0.1:5000/", json=data)
-
-# Print the response from the Flask app
-print(response.json())
-
-
-# In[ ]:
-
-
 
 
